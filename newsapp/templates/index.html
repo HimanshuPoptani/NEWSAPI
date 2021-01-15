@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <meta charset="utf-8">
+    <title></title>
+
+<!-- Optional theme -->
+  </head>
+  <body>
+    <div class="jumbotron" style="color:black">
+
+      <h1 style ="color:blue">
+   Get The latest news on our website
+      </h1>
+
+    </div>
+
+    
+
+
+    <div class="container">
+      {% for new, des, i in mylist %}
+              <img class="img-fluid" src="{{ i }}" alt="" height="400" width="750">
+              <h1>news:</h1> {{ new }}
+              {{ value|linebreaks }}
+
+              <h4>description:</h4>{{ des }}
+              {{ value|linebreaks }}
+
+      {% endfor %}
+    </div>
+
+  </body>
+</html>
