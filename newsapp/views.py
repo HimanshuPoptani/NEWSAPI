@@ -6,7 +6,7 @@ from newsapi import NewsApiClient
 def index(request):
     try:
         newsapi = NewsApiClient(api_key="d216e0827bec4110ab62ce195ed5e61e")
-        top = newsapi.get_top_headlines("india")
+        top = newsapi.get_top_headlines(q="api")
 
         l = top['articles']
         desc = []
